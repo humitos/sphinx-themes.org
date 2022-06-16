@@ -22,7 +22,8 @@ def publish(session):
     session.install("-r", "requirements.txt")
     session.run("playwright", "install", "firefox")
     session.run("python", "-m", "src.generate_sample_sites", *session.posargs)
-    session.run("python", "-m", "src.generate_screenshots", *session.posargs)
+    # Disable screenshots because playwright does not work
+    # session.run("python", "-m", "src.generate_screenshots", *session.posargs)
     session.run("python", "-m", "src.generate_scaffold")
 
 
