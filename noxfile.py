@@ -20,7 +20,7 @@ def list_themes(session):
 @nox.session(reuse_venv=True)
 def publish(session):
     session.install("-r", "requirements.txt")
-    session.run("playwright", "install", "firefox")
+    session.run("playwright", "install", "--with-deps", "firefox")
     session.run("python", "-m", "src.generate_sample_sites", *session.posargs)
     session.run("python", "-m", "src.generate_screenshots", *session.posargs)
     session.run("python", "-m", "src.generate_scaffold")
