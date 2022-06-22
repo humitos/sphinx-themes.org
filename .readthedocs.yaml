@@ -8,7 +8,7 @@ build:
     - pip install nox
     - nox -s publish
     - mkdir -p _readthedocs/html/
-    - mv public/ _readthedocs/html/public/
+    - mv public/* _readthedocs/html/
 
   # playwright install-deps firefox
   # We can't call it like that because it needs sudo permissions
