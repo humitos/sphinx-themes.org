@@ -20,7 +20,7 @@ build:
     pre_build:
       - mkdir -p docs/_templates/ docs/_build/html
       - cp public/index.html docs/_templates
-      - cp -r public/* docs/_build/html
+      - cp -r public/* docs/_build/html/
       - tree docs
 
 python:
