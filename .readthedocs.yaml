@@ -20,10 +20,9 @@ build:
       - mkdir -p docs/_templates/ docs/_build/html
       - cp public/index.html docs/_templates
     post_build:
-      - find docs/
-      - find ../../
+      # This is a small hack to avoid this issue:
+      # https://github.com/readthedocs/readthedocs.org/issues/9179
       - cp -r -v public/* ../../artifacts/latest/sphinx/
-      - find ../../artifacts/
 
 python:
   install:
