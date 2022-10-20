@@ -22,7 +22,7 @@ build:
     post_build:
       # This is a small hack to avoid this issue:
       # https://github.com/readthedocs/readthedocs.org/issues/9179
-      - cp -r -v public/* ../../artifacts/latest/sphinx/
+      - cp -r -v public/* ../../artifacts/${READTHEDOCS_VERSION}/sphinx/
 
 python:
   install:
