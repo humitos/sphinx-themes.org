@@ -10,7 +10,6 @@ build:
   tools:
     python: "3.10"
   apt_packages:
-    - tree
     - libasound2
     - libdbus-glib-1-2
   jobs:
@@ -21,7 +20,6 @@ build:
       - mkdir -p docs/_templates/ docs/_build/html
       - cp public/index.html docs/_templates
       - cp -r public/* docs/_build/html/
-      - tree docs
 
 python:
   install:
